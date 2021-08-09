@@ -21,7 +21,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint:fix": "npx eslint '**/*{.ts,.tsx}' --fix"
+    "lint:fix": "npx eslint '**/*{.ts,.tsx}' --fix",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -45,11 +46,18 @@
     "@typescript-eslint/eslint-plugin": "^4.29.0",
     "@typescript-eslint/parser": "^4.29.0",
     "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.24.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.24.0",
+    "husky": ">=6",
+    "lint-staged": ">=10",
     "prettier": "2.3.2"
+  },
+  "lint-staged": {
+    "*{.tsx,.ts}": "eslint --cache --fix",
+    "*.{ts,tsx,css,md}": "prettier --write"
   }
 }
