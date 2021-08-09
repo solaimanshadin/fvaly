@@ -1,5 +1,16 @@
+import AppRouter from './AppRouter';
+import Header from './components/common/Header';
 function App() {
-  return <div></div>;
+  let hello = '';
+  console.log(hello);
+
+  return (
+    <>
+      <AppRouter>
+        <Header />
+      </AppRouter>
+    </>
+  );
 }
 
 export default App;
