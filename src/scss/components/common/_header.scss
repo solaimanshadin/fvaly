@@ -1,0 +1,27 @@
+.header__component{
+    .top-header {
+        svg{
+            color: $primary;
+            margin-right: 6px;
+        }
+    }
+    .middle-header{
+        .branding{
+            width: 100%;
+            max-width: 120px;
+        }
+        .icon-list{
+            li{
+                font-size: 16px;
+                width: 35px;
+                height: 35px;
+                margin: 0;
+                padding: 3px;
+                text-align: center;
+                box-shadow: 0px 0px 4px #ddd;
+                border-radius: 50%;
+            }
+        }
+    }
+    
+}
