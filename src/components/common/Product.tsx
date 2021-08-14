@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 import { IProduct } from 'types';
 
-const Product = ({ product }: IProduct) => {
+const Product = ({ product }: { product: IProduct }) => {
   return (
     <Col md={3} className="mb-3">
       <Card>
