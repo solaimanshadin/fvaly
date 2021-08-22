@@ -1,3 +1,4 @@
+import Footer from 'components/common/Footer';
 import Banner from 'components/home/Banner';
 import Products from 'components/home/Products';
 import useAsync from 'hooks/useAsync';
@@ -18,6 +19,7 @@ const Home = () => {
     <div>
       <Banner />
       <Products isLoading={isLoading} products={data} />
+      <Footer/>
     </div>
   );
 };
