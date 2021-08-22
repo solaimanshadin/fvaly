@@ -25,19 +25,19 @@ const ProductDetails = () => {
           {isLoading && <h3>Loading ....</h3>}
           {isSuccess && (
             <Row>
-              <Col md={4}>
+              <Col md={6}>
                 <img
                   className="img-fluid"
                   src={imageUrlParser(data ? image : '')}
                   alt={name}
                 />
               </Col>
-              <Col md={8}>
-                <h3 className="mb-3">{name}</h3>
-                <h1>৳ {price}</h1>
+              <Col md={6}>
+                <h3>{name}</h3>
+                <h1 className="mt-3 mb-5">৳ {price}</h1>
                 <button className="btn btn-primary">
                   <AiOutlineShoppingCart />
-                  Add to Cart
+                  <span className="ms-2">Add to Cart</span>
                 </button>
                 <p className="mt-5">{description}</p>
               </Col>
