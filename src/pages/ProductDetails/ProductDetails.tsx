@@ -1,19 +1,22 @@
 import useAsync from 'hooks/useAsync';
-import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import ProductService from 'services/ProductService';
 import { IProduct } from 'types';
 import imageUrlParser from 'utils/imageUrlParser';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { useCallback } from 'react';
 interface IParams {
   id: string;
 }
 const ProductDetails = () => {
   const { id } = useParams<IParams>();
-  const { data, isLoading, isSuccess, isError, error } = useAsync<IProduct>(
-    () => ProductService.getProductByID(id)
-  );
+  const getProduct = useCallback(() => {
+    return ProductService.getProductByID(id);
+  }, [id]);
+
+  const { data, isLoading, isSuccess, isError, error } =
+    useAsync<IProduct>(getProduct);
   const { name, image, description, price } = (data || {}) as IProduct;
   return (
     <div className="product__details__component my-3">
@@ -22,15 +25,19 @@ const ProductDetails = () => {
           {isLoading && <h3>Loading ....</h3>}
           {isSuccess && (
             <Row>
-              <Col md={4}>
-                <img src={imageUrlParser(data ? image : '')} alt={name} />
+              <Col md={6}>
+                <img
+                  className="img-fluid"
+                  src={imageUrlParser(data ? image : '')}
+                  alt={name}
+                />
               </Col>
-              <Col md={8}>
-                <h3 className="mb-3">{name}</h3>
-                <h1>৳ {price}</h1>
+              <Col md={6}>
+                <h3>{name}</h3>
+                <h1 className="mt-3 mb-5">৳ {price}</h1>
                 <button className="btn btn-primary">
                   <AiOutlineShoppingCart />
-                  Add to Cart
+                  <span className="ms-2">Add to Cart</span>
                 </button>
                 <p className="mt-5">{description}</p>
               </Col>
