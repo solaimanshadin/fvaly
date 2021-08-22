@@ -1,4 +1,3 @@
-import Footer from 'components/common/Footer';
 import ProductDetails from 'components/home/ProductDetails';
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -16,7 +15,6 @@ const AppRouter: React.FC = ({ children }) => {
           <Route exact path="/product/:id" component={ProductDetails} />
         </Suspense>
       </Switch>
-      <Footer />
     </Router>
   );
 };
