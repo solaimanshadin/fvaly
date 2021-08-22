@@ -1,0 +1,62 @@
+.footer__component {
+    background-color: #333e4f;
+    color: #9ca9be;
+  
+    .footer_main {
+      .footer-menu {
+        ul {
+          li {
+            a {
+              color: #9ca9be;
+            }
+          }
+        }
+      }
+  
+      .social-icons {
+        .social_bg {
+          padding: 0.5em 0.8em;
+          margin: 5px;
+          color: $white;
+          text-align: center;
+          border-radius: 5px;
+        }
+  
+        .facebook-bg {
+          background: #3b5998;
+        }
+        .facebook-bg:hover {
+          background: #1195f5;
+        }
+  
+        .instagram-bg {
+          background: radial-gradient(
+            circle at 30% 107%,
+            rgb(253, 244, 151) 0%,
+            rgb(253, 244, 151) 5%,
+            rgb(253, 89, 73) 45%,
+            rgb(214, 36, 159) 60%,
+            rgb(40, 90, 235) 90%
+          );
+        }
+        .instagram-bg:hover {
+          background: radial-gradient(
+            circle at 20% 97%,
+            rgb(253, 244, 151) 0%,
+            rgb(253, 244, 151) 5%,
+            rgb(253, 89, 73) 55%,
+            rgb(214, 36, 159) 70%,
+            rgb(40, 90, 235) 90%
+          );
+        }
+  
+        .youtube-bg {
+          background: #ff0000a6;
+        }
+        .youtube-bg:hover {
+          background: #ff0000;
+        }
+      }
+    }
+  }
+  
