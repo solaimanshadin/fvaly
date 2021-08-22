@@ -1,0 +1,8 @@
+.login__component {
+    .login_main {
+        .form-control:focus {
+             border-color: none; 
+             box-shadow: none;
+        }
+    }
+}
