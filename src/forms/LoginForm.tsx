@@ -13,12 +13,12 @@ const LoginForm = () => {
             >
               <Form>
                 <Form.Group className="mb-3" controlId="formGroupEmail">
-                  <Form.Label>Email or Phone</Form.Label>
+                  <Form.Label className="fw-bold">Email</Form.Label>
                   <Form.Control type="email" placeholder="Enter email" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formGroupPassword">
-                  <Form.Label>Password</Form.Label>
-                  <Form.Control type="password" placeholder="Password" />
+                  <Form.Label className="fw-bold">Password</Form.Label>
+                  <Form.Control type="password" placeholder="Enter Password" />
                 </Form.Group>
                 <div className="d-grid gap-2">
                   <Button variant="dark">LOGIN</Button>
