@@ -55,7 +55,9 @@ const Header = () => {
             </InputGroup>
             <ul className="icon-list list-unstyled d-flex gap-3">
               <li>
-                <FiShoppingBag />
+                <Link to="/checkout">
+                  <FiShoppingBag />
+                </Link>
               </li>
               <li>
                 <BiUser />
