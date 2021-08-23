@@ -1,0 +1,22 @@
+.captcha__component {
+    
+    .captcha-img {
+        position: relative;
+        background: #000;
+        user-select: none;
+
+        .captcha {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100%;
+            color: #fff;
+            font-size: 20px;
+            text-align: center;
+            letter-spacing: 10px;
+            transform: translate(-50%, -50%);
+            text-shadow: 0px 0px 2px #b1b1b1;
+            font-family: 'Noto Serif', serif;
+          }
+    }
+}
