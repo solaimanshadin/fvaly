@@ -4,6 +4,9 @@ import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 const Home = React.lazy(() => import('./pages/Home/Home'));
 const Help = React.lazy(() => import('./pages/Help/Help'));
+const ForgotPassword = React.lazy(
+  () => import('./pages/ForgotPassword/ForgotPassword')
+);
 
 const AppRouter: React.FC = ({ children }) => {
   return (
@@ -14,6 +17,7 @@ const AppRouter: React.FC = ({ children }) => {
           <Route exact path="/" component={Home} />
           <Route exact path="/help" component={Help} />
           <Route exact path="/product/:id" component={ProductDetails} />
+          <Route exact path="/forgot-password" component={ForgotPassword} />
         </Suspense>
       </Switch>
       <Footer />
