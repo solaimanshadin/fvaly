@@ -24,7 +24,7 @@ const LoginForm = () => {
                   <Button variant="dark">LOGIN</Button>
                 </div>
               </Form>
-              <div className="text-center">
+              <div className="login-form-info  text-center">
                 <p className="py-4">
                   {` Don't have an account?`}
                   <a href="/sign-up" className="text-primary ps-3">
