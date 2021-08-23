@@ -1,23 +1,24 @@
 import { IProduct } from './../../types';
-// import { ActionType } from 'redux/actionTypes';
+import { ActionType } from 'redux/actionTypes';
 
 export const addToCart = (payload: IProduct) => {
   return {
-    type: 'add_to_cart',
+    type: ActionType.ADD_TO_CART,
     payload,
   };
 };
 
 export const removeFromCart = (payload: string) => {
   return {
-    type: 'remove_from_cart',
+    type: ActionType.REMOVE_FROM_CART,
     payload,
   };
 };
 
 export const clearCart = () => {
   return {
-    type: 'clear_cart',
+    type: ActionType.CLEAR_CART,
+    payload: '',
   };
 };
 

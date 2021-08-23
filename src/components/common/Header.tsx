@@ -13,7 +13,11 @@ import { FaRegEnvelope } from 'react-icons/fa';
 import { FiPhoneCall, FiShoppingBag } from 'react-icons/fi';
 import { BiSearch, BiUser } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
+// import { useSelector } from 'react-redux';
+// import { AppState } from 'redux/store';
 const Header = () => {
+  // const cart = useSelector((state: AppState) => state.cart);
+
   return (
     <div className="header__component">
       <div className="top-header py-2 bg-light border-bottom">
@@ -57,6 +61,7 @@ const Header = () => {
               <li>
                 <Link to="/checkout">
                   <FiShoppingBag />
+                  {/* <span className="badge bg-primary">{cart?.length}</span> */}
                 </Link>
               </li>
               <li>
