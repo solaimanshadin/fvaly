@@ -21,7 +21,7 @@ const ForgotPasswordForm = () => {
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formGroupPassword">
                   <Form.Label>
-                    <span className="fs-6 text-secondary">
+                    <span className="">
                       Enter the exact letters you see in the exact order.
                     </span>
                   </Form.Label>
