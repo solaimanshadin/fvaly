@@ -15,9 +15,8 @@ import { BiSearch, BiUser } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { AppState } from 'redux/store';
-import { IProduct } from 'types';
 const Header = () => {
-  const cart: IProduct[] = useSelector((state: AppState) => state.cart);
+  const cart = useSelector((state: AppState) => state.cart);
 
   return (
     <div className="header__component">
