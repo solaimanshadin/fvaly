@@ -10,7 +10,7 @@
             left: 50%;
             top: 50%;
             width: 100%;
-            color: #fff;
+            color: #bbb;
             font-size: 20px;
             text-align: center;
             letter-spacing: 10px;
@@ -18,5 +18,9 @@
             text-shadow: 0px 0px 2px #b1b1b1;
             font-family: 'Noto Serif', serif;
           }
+    }
+        
+    .reload-btn svg {
+        cursor: pointer;
     }
 }
