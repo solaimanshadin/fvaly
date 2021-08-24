@@ -10,7 +10,7 @@ const cartReducer = (
     case ActionType.ADD_TO_CART:
       return [...state, action.payload];
     case ActionType.REMOVE_FROM_CART: {
-      const newState = state.filter((item) => item._id !== 'ji');
+      const newState = state.filter((item) => item._id !== action.payload._id);
       return newState;
     }
     //  case ActionType.CLEAR_CART:
