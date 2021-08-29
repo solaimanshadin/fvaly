@@ -12,7 +12,12 @@ import { BsPhone } from 'react-icons/bs';
 import { FaRegEnvelope } from 'react-icons/fa';
 import { FiPhoneCall, FiShoppingBag } from 'react-icons/fi';
 import { BiSearch, BiUser } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { AppState } from 'redux/store';
 const Header = () => {
+  const cart = useSelector((state: AppState) => state.cart);
+
   return (
     <div className="header__component">
       <div className="top-header py-2 bg-light border-bottom">
@@ -38,7 +43,9 @@ const Header = () => {
       <div className="middle-header">
         <Container>
           <div className="d-flex align-items-center gap-5 py-3">
-            <img className="branding" src={logo} alt="Fvaly" />
+            <Link to="/">
+              <img className="branding" src={logo} alt="Fvaly" />
+            </Link>
             <InputGroup>
               <FormControl
                 className="border border-primary"
@@ -52,7 +59,10 @@ const Header = () => {
             </InputGroup>
             <ul className="icon-list list-unstyled d-flex gap-3">
               <li>
-                <FiShoppingBag />
+                <Link to="/checkout">
+                  <FiShoppingBag />
+                  <span className="badge bg-primary">{cart.length}</span>
+                </Link>
               </li>
               <li>
                 <BiUser />
