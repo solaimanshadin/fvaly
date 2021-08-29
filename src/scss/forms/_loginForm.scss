@@ -1,0 +1,13 @@
+.login__component {
+    .login_main {
+        .form-control:focus {
+             border-color: none; 
+             box-shadow: none;
+        }
+
+        .login-form-info {
+            font-weight: 500;
+            letter-spacing: .1; 
+        }
+    }
+}
