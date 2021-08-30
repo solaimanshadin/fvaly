@@ -1,24 +1,20 @@
-import React from 'react';
-import { Carousel, Col, Container, ListGroup, Row } from 'react-bootstrap';
 import banner1 from 'assets/images/banner1.png';
 import banner2 from 'assets/images/banner2.png';
+import Categories from 'components/Categories/Categories';
+import { Carousel, Col, Container, Row } from 'react-bootstrap';
+
 const Banner = () => {
   return (
     <div>
       <Container>
-        <Row>
+        <Row className="g-2">
           <Col lg={3}>
-            <ListGroup>
-              <ListGroup.Item>Cras justo odio</ListGroup.Item>
-              <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-              <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-              <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-              <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-              <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-              <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-              <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-              <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-            </ListGroup>
+            <div
+              className="dropdown-menu d-block"
+              style={{ position: 'static' }}
+            >
+              <Categories />
+            </div>
           </Col>
           <Col lg={9} className="mt-4">
             <Carousel>

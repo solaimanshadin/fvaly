@@ -1,8 +1,8 @@
 import Product from 'components/common/Product';
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
-import { IProduct } from 'types';
 import ProductsSkeleton from 'skeletons/ProductsSkeleton';
+import { IProduct } from 'types';
 
 interface IProps {
   products: IProduct[] | null;
@@ -14,7 +14,7 @@ const Products = ({ products, isLoading }: IProps) => {
   return (
     <div className="my-5">
       <Container>
-        <h2 className="mb-4">Latest Products</h2>
+        <h2 className="mb-4 pt-3">Latest Products</h2>
         {isLoading && <ProductsSkeleton />}
         {!isLoading && (
           <Row className="align-items-stretch">
