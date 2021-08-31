@@ -1,27 +1,200 @@
-.header__component{
-    .top-header {
-        svg{
-            color: $primary;
-            margin-right: 6px;
-        }
+.header__component {
+  .top-header {
+    svg {
+      color: $primary;
+      margin-right: 6px;
     }
-    .middle-header{
-        .branding{
-            width: 100%;
-            max-width: 120px;
-        }
-        .icon-list{
-            li{
-                font-size: 16px;
-                width: 35px;
-                height: 35px;
-                margin: 0;
-                padding: 3px;
-                text-align: center;
-                box-shadow: 0px 0px 4px #ddd;
-                border-radius: 50%;
-            }
-        }
+  }
+  .middle-header {
+    .branding {
+      width: 100%;
+      max-width: 120px;
     }
-    
+    .icon-list {
+      li {
+        font-size: 16px;
+        width: 35px;
+        height: 35px;
+        margin: 0;
+        padding: 3px;
+        text-align: center;
+        box-shadow: 0px 0px 4px #ddd;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+/***
+** Css for Header Menu
+*!! this css code exit before this project; that way I am not writing in scss;
+*/
+.navbar.navbar-2 {
+  background-color: #333333;
+  padding: 0px 0px;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.04);
+}
+
+.navbar.navbar-2 .btn-style {
+  background: transparent;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  color: white;
+  padding-left: 20px;
+}
+
+.navbar.navbar-2 .btn-style:focus {
+  border: none;
+  outline: none;
+}
+
+.navbar.navbar-2 .dropdown {
+  background-color: $primary;
+  text-transform: uppercase;
+  width: 260px;
+  padding: 2px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar.navbar-2 .dropdown .nav-link {
+  font-size: 18px;
+}
+
+.navbar.navbar-2 .dropdown span.nav-link {
+  color: #fff !important;
+}
+
+.navbar.navbar-2 .navbar-nav-1 .nav-link {
+  font-weight: 600;
+}
+
+.navbar.navbar-2 .nav-link {
+  color: #fff !important;
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+.navbar.navbar-2 .nav-link:hover {
+  color: #bdbdbd !important;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-menu {
+  width: 260px;
+  border: none !important;
+  box-shadow: 0px 0px 0 rgba(0, 0, 0, 0.2), 0 -1px 5px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0px;
+  margin: 0px;
+  padding-top: 0px;
+  padding-bottom: 50px;
+  text-transform: initial;
+  left: 0px;
+}
+
+.dropdown-item {
+  font-size: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 260px;
+}
+
+.dropdown-item:active {
+  color: #16181b;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.dropdown-item:hover {
+  background: transparent;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+/* *********** Sub Category **************** */
+.insert-sub-category {
+  position: relative;
+}
+
+.sub-category {
+  position: absolute;
+  background: #fff;
+  left: 99%;
+  top: 0%;
+  display: none;
+  width: 100%;
+  padding: 0px 8px;
+  border: none !important;
+  box-shadow: 0px 0px 0 rgba(0, 0, 0, 0.2), 0 -1px 5px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0px;
+}
+
+.insert-sub-category:hover .sub-category {
+  display: block;
+}
+
+.sub-category-item {
+  display: block;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar-2 {
+  .toggler-btn {
+    font-size: 24px;
+    margin-top: -5px;
+  }
+}
+
+/****************** carousel *******************/
+.carousel {
+  border-radius: 15px;
+  .carousel-indicators {
+    button {
+      height: 10px !important;
+      width: 10px !important;
+      border-radius: 5px;
+      background-clip: unset;
+      border: 0;
+      opacity: 1;
+      background-color: #f5515f;
+    }
+    .active {
+      background-color: $primary;
+      width: 35px !important;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .carousel-indicators {
+    button {
+      height: 5px !important;
+      width: 5px !important;
+    }
+    .active {
+      width: 15px;
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .carousel-indicators {
+    button {
+      height: 7px !important;
+      width: 7px !important;
+    }
+
+    .active {
+      width: 20px;
+    }
+  }
 }
