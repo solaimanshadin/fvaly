@@ -9,14 +9,17 @@ import {
   Navbar,
 } from 'react-bootstrap';
 import { BsPhone } from 'react-icons/bs';
-import { FaRegEnvelope } from 'react-icons/fa';
+import { FaRegEnvelope, FaSignOutAlt } from 'react-icons/fa';
 import { FiPhoneCall, FiShoppingBag } from 'react-icons/fi';
 import { BiSearch, BiUser } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { AppState } from 'redux/store';
+import { logout } from 'redux/actionCreators/authActionCreators';
 const Header = () => {
+  const dispatch = useDispatch();
   const cart = useSelector((state: AppState) => state.cart);
+  const { data } = useSelector((state: AppState) => state.auth);
 
   return (
     <div className="header__component">
@@ -64,11 +67,17 @@ const Header = () => {
                   <span className="badge bg-primary">{cart.length}</span>
                 </Link>
               </li>
+
               <li>
                 <Link to="/login">
                   <BiUser />
                 </Link>
               </li>
+              {data && (
+                <li className="btn">
+                  <FaSignOutAlt onClick={() => dispatch(logout())} />
+                </li>
+              )}
             </ul>
           </div>
         </Container>
