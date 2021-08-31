@@ -8,10 +8,3 @@ export interface IProduct {
   image: string;
   __v: number;
 }
-
-export interface ICategory {
-  _id?: string;
-  name: string;
-  slug: string;
-  __v: number;
-}
