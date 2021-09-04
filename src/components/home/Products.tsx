@@ -10,7 +10,6 @@ interface IProps {
 }
 
 const Products = ({ products, isLoading }: IProps) => {
-  console.log('products', products);
   return (
     <div className="my-5">
       <Container>
