@@ -11,7 +11,7 @@ const Product = ({ product }: IProps) => {
   const { name, image, _id } = product;
 
   return (
-    <Col md={3} className="mb-3 h-100">
+    <Col md={3} className="pb-3">
       <Link to={`/product/${_id}`}>
         <Card className="h-100">
           <Card.Img variant="top" src={imageUrlParser(image)} />

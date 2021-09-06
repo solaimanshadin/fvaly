@@ -88,7 +88,10 @@ const Header = () => {
           <Navbar.Brand href="#home">Categories</Navbar.Brand>
           <Nav className="ms-auto">
             <Nav.Link href="#home">News feed</Nav.Link>
-            <Nav.Link href="#features">Merchant Zone</Nav.Link>
+            <Nav.Link as={Link} to="/dashboard">
+              {' '}
+              {data?.role === 'admin' ? 'Dashboard' : 'Merchant Zone'}
+            </Nav.Link>
             <Nav.Link href="#pricing">Help</Nav.Link>
           </Nav>
         </Container>

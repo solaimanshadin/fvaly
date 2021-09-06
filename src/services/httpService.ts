@@ -6,6 +6,20 @@ const instance = axios.create({
   timeout: 15000,
 });
 
+// Add a request interceptor
+instance.interceptors.request.use(function (config) {
+  // Do something before request is sent
+  console.log('Api is calling');
+  return {
+    ...config,
+    headers: {
+      Authorization: JSON.parse(
+        JSON.parse(localStorage.getItem('persist:root') || '').auth
+      )?.data?.token,
+    },
+  };
+});
+
 // const responseBody = () => (response: AxiosResponse) => response.data.data;
 
 const responseBody = (response: AxiosResponse) => response.data.data;
