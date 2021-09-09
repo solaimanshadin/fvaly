@@ -23,7 +23,7 @@ const Captcha = ({ captcha, resetCaptcha }: ICaptcha) => {
           </div>
         </Col>
         <Col md={4}>
-          <div className="reload-btn w-100 h-100 bg-dark text-white fs-4 rounded d-flex justify-content-center align-items-center">
+          <div className="reload-btn w-100 h-100 bg-dark py-sm-1 my-sm-2 text-white fs-4 rounded d-flex justify-content-center align-items-center">
             <AiOutlineReload onClick={() => resetCaptcha()} />
           </div>
         </Col>
