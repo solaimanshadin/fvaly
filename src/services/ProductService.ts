@@ -5,6 +5,10 @@ class ProductService {
     return requests.get('/product');
   }
 
+  getMerchantsProducts(): Promise<IProduct[]> {
+    return requests.get('/merchant/products');
+  }
+
   getProductByID(id: string): Promise<IProduct> {
     return requests.get(`/product/${id}`);
   }

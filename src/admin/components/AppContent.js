@@ -4,13 +4,16 @@ import { CContainer, CSpinner } from '@coreui/react'
 
 // routes config
 import routes from '../routes'
+import { useSelector } from 'react-redux'
 
 const AppContent = () => {
+  const { data } = useSelector((state) => state.auth)
+  const filteredRoutes = routes.filter((route) => route.role.includes(data?.role))
   return (
     <CContainer lg>
       <Suspense fallback={<CSpinner color="primary" />}>
         <Switch>
-          {routes.map((route, idx) => {
+          {filteredRoutes.map((route, idx) => {
             return (
               route.component && (
                 <Route
