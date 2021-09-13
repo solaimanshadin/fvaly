@@ -1,4 +1,3 @@
-import ProductDetails from 'pages/ProductDetails/ProductDetails';
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import DefaultLayout from 'components/layout/DefaultLayout';
@@ -9,6 +8,9 @@ const Help = React.lazy(() => import('./pages/Help/Help'));
 const Login = React.lazy(() => import('./pages/Login/Login'));
 const Checkout = React.lazy(() => import('./pages/Checkout/Checkout'));
 const Dashboard = React.lazy(() => import('./admin/layout/DefaultLayout'));
+const ProductDetails = React.lazy(
+  () => import('pages/ProductDetails/ProductDetails')
+);
 
 const AppRouter: React.FC = ({ children }) => {
   return (
