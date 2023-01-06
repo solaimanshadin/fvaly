@@ -2,7 +2,7 @@ import axios, { AxiosResponse } from 'axios';
 const baseUrl = process.env.REACT_APP_API_BASE_URL;
 console.log('baseUrl', baseUrl);
 const instance = axios.create({
-  baseURL: 'https://fvaly.herokuapp.com/api',
+  baseURL: 'https://fvaly.onrender.com/api/',
   timeout: 15000,
 });
 
